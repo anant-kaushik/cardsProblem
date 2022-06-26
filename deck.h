@@ -13,15 +13,44 @@ using namespace std;
 
 namespace Seegrid {
 class Deck {
-
 public:
+    /**
+     * @brief Construct a new Deck object with 52 cards in order. Similar to a fresh deck of cards.
+     * 
+     */
     Deck();
+
     ~Deck();
 
+    /**
+     * @brief Shuffle the deck of cards in a random order.
+     * 
+     */
     void shuffle();
+
+    /**
+     * @brief Get a single card from the end of the deck. 
+     * We assume that the deck of card is upside down so 
+     * last card becomes the top card. 
+     * The delt card is removed from the deck.
+     * 
+     * @return Card 
+     */
     Card deal_card();
-    Card get_card_at(uint16_t pos);
+
+    /**
+     * @brief Print the cards in the deck in normal order. 
+     * We assume the cards are face first and a person is simply 
+     * looking through the cards.
+     * 
+     */
     void print_deck();
+
+    /**
+     * @brief Get the size of the deck
+     * 
+     * @return size_t 
+     */
     size_t size();
 
 private:

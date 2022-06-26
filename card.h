@@ -13,6 +13,12 @@ using namespace std;
 namespace Seegrid {
 class Card {
 public:
+    /**
+     * @brief Construct a new Card object
+     * 
+     * @param s Suit of the card. For example "Spades", "Clubs", etc.
+     * @param t Type of the card. For example "Ace", "2", "3", etc.
+     */
     Card(string s, string t);
 
     string get_type();

@@ -40,10 +40,6 @@ Card Deck::deal_card() {
     return c;
 };
 
-Card Deck::get_card_at(uint16_t pos) {
-    return cards[pos];
-}
-
 void Deck::print_deck() {
     for (int i=0; i < cards.size(); i++) {
         Card c = cards[i];
